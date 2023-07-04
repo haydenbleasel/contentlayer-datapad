@@ -1,3 +1,15 @@
+# v1.0.8 (Tue Jul 04 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Fix ES Module ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.7 (Tue Jul 04 2023)
 
 #### ⚠️ Pushed to `main`
