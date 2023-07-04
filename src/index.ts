@@ -16,7 +16,7 @@ import type { Options as PrettyCodeOptions } from 'rehype-pretty-code';
 import type { Options as RehypeAutoLinkHeadingsOptions } from 'rehype-autolink-headings';
 import type { ComputedFields } from 'contentlayer/source-files';
 
-export const computedFields = ({
+export const computeFields = ({
   openGraphEndpoint = '/api/og',
   imagesFolder = './public',
 }: {
