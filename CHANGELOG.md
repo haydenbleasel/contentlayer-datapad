@@ -1,3 +1,15 @@
+# v1.0.7 (Tue Jul 04 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update tsup.config.ts ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.6 (Tue Jul 04 2023)
 
 #### ⚠️ Pushed to `main`
