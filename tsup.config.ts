@@ -5,10 +5,4 @@ export default defineConfig({
   minify: true,
   dts: true,
   format: ['esm'],
-  outExtension: () => ({
-    js: '.js',
-  }),
-  loader: {
-    '.js': 'jsx',
-  },
 });
