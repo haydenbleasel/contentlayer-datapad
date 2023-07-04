@@ -66,7 +66,7 @@ export const computedFields = ({
       return `${openGraphEndpoint}?${searchParams.toString()}`;
     },
   },
-  imageData: {
+  imageBlur: {
     type: 'string',
     description: 'The image data of the document',
     resolve: async (doc) => {
@@ -123,3 +123,5 @@ export const rehypePlugins = [
   [rehypeAutolinkHeadings, rehypeAutolinkHeadingsOptions],
   rehypePresetMinify,
 ];
+
+export type { Toc } from 'pliny/mdx-plugins';

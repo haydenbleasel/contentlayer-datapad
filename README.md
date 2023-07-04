@@ -23,7 +23,7 @@ It includes the following plugins:
 yarn add @beskar/datapad
 ```
 
-## Usage
+## Setup
 
 ```ts
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
@@ -78,11 +78,48 @@ export default source;
 
 The computed fields are:
 
-| Field Name | Type | Description |
-| --- | --- | --- |
-| `slug` | `string` | The slug of the document, used in the URL |
-| `slugAsParams` | `string` | The slug as a path segment |
-| `readingTime` | `string` | The estimated time to read the document, in minutes |
-| `toc` | `list` | The table of contents of the document |
-| `image` | `string` | The image of the document |
-| `imageData` | `string` | The LQIP image data of the document |
+| Field Name | Type | Description | Example Output |
+| --- | --- | --- | --- |
+| `slug` | `string` | The slug of the document, used in the URL | `'/blog/my-post'` |
+| `slugAsParams` | `string` | The slug as a path segment | `'my-post'` |
+| `readingTime` | `string` | The estimated time to read the document, in minutes | `'5 min read'` |
+| `toc` | `json` | The table of contents of the document | `[{ value: 'Heading 1', depth: 1, url: '#heading-1' }]` |
+| `imageBlur` | `string` | The LQIP image data of the document | `'UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAkABUB8JYwC7ADbW2wxAAD+5fWSusCgEGgrbEnESec12AakPGs5RtCwUs8GJTOZH7EgIAA='` |
+
+## Usage
+
+Here's how to use the custom fields in your Next.js app:
+
+```tsx
+import { allBlogs } from '@/.contentlayer/generated';
+import Image from 'next/image';
+import type { Toc } from '@beskar-labs/datapad';
+
+return allBlogs.sort(sortBlogPostByDate).map((post) => (
+  <div key={post.name}>
+    <Image
+      src={src}
+      width={1920}
+      height={1080}
+      alt=""
+      blurDataURL={`data:image/jpg;base64,${post.imageBlur}`}
+      placeholder="blur"
+    />
+
+    <p>{post.readingTime}</p>
+
+    <ul>
+      {(post.toc as Toc).map((item) => (
+        <li
+          key={item.url}
+          style={{
+            paddingLeft: `${item.depth - 2}rem`,
+          }}
+        >
+          <a href={item.url}>{item.value}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+));
+```
