@@ -1,6 +1,6 @@
 {
   "name": "@beskar-labs/datapad",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "An opinionated Contentlayer configuration designed for Beskar Labs content hubs.",
   "files": [
     "dist"
