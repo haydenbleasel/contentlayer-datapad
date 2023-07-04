@@ -15,6 +15,7 @@ import lqip from 'lqip-modern';
 import type { Options as PrettyCodeOptions } from 'rehype-pretty-code';
 import type { Options as RehypeAutoLinkHeadingsOptions } from 'rehype-autolink-headings';
 import type { ComputedFields } from 'contentlayer/source-files';
+import type { Pluggable } from 'unified';
 
 export const computeFields = <T extends string>({
   openGraphEndpoint = '/api/og',
@@ -112,9 +113,9 @@ const rehypeAutolinkHeadingsOptions: RehypeAutoLinkHeadingsOptions = {
   },
 };
 
-export const remarkPlugins = [remarkGfm, remarkMath];
+export const remarkPlugins: Pluggable[] = [remarkGfm, remarkMath];
 
-export const rehypePlugins = [
+export const rehypePlugins: Pluggable[] = [
   rehypeKatex,
   rehypeCitation,
   rehypeAccessibleEmojis,
