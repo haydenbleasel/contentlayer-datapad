@@ -52,7 +52,7 @@ export const Blog = defineDocumentType(() => ({
       required: false,
     },
   },
-  computedFields: computeFields({}),
+  computedFields: computeFields<'Blog'>({}),
 }));
 
 const source = makeSource({

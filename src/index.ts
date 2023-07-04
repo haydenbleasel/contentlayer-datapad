@@ -16,13 +16,13 @@ import type { Options as PrettyCodeOptions } from 'rehype-pretty-code';
 import type { Options as RehypeAutoLinkHeadingsOptions } from 'rehype-autolink-headings';
 import type { ComputedFields } from 'contentlayer/source-files';
 
-export const computeFields = ({
+export const computeFields = <T extends string>({
   openGraphEndpoint = '/api/og',
   imagesFolder = './public',
 }: {
   openGraphEndpoint?: string;
   imagesFolder?: string;
-}): ComputedFields => ({
+}): ComputedFields<T> => ({
   slug: {
     type: 'string',
     description: 'The slug of the document, used in the URL',
