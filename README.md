@@ -27,7 +27,8 @@ yarn add @beskar/datapad
 
 ```ts
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
-import { computedFields, remarkPlugins, rehypePlugins } from '@beskar/datapad';
+import { computeFields, remarkPlugins, rehypePlugins } from '@beskar/datapad';
+import type { ComputedFields } from 'contentlayer/source-files';
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
@@ -51,7 +52,7 @@ export const Blog = defineDocumentType(() => ({
       required: false,
     },
   },
-  computedFields,
+  computedFields: computeFields({}),
 }));
 
 const source = makeSource({
@@ -66,13 +67,22 @@ const source = makeSource({
 export default source;
 ```
 
+## Configuration
+
+`computeFields` accepts a configuration object with the following properties:
+
+| Property | Type | Description | Default |
+| --- | --- | --- | --- |
+| openGraphEndpoint | `string` | The endpoint of the Open Graph image generator (i.e. @vercel/og) | `'/api/og'` |
+| imagesFolder | `string` | The folder where your images are stored, prepended to the document image path | `'./public'` |
+
 The computed fields are:
 
 | Field Name | Type | Description |
 | --- | --- | --- |
 | `slug` | `string` | The slug of the document, used in the URL |
 | `slugAsParams` | `string` | The slug as a path segment |
-| `readingTime` | `json` | The estimated time to read the document, in minutes |
+| `readingTime` | `string` | The estimated time to read the document, in minutes |
 | `toc` | `list` | The table of contents of the document |
 | `image` | `string` | The image of the document |
 | `imageData` | `string` | The LQIP image data of the document |
