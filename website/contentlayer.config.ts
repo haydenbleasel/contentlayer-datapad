@@ -1,5 +1,9 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
-import { computeFields, remarkPlugins, rehypePlugins } from '..';
+import {
+  computeFields,
+  remarkPlugins,
+  rehypePlugins,
+} from '@beskar-labs/datapad';
 
 export const Page = defineDocumentType(() => ({
   name: 'Page',

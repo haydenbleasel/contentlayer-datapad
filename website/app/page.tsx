@@ -3,9 +3,9 @@ import { getMDXComponent } from 'next-contentlayer/hooks';
 import Image from 'next/image';
 import clsx from 'clsx';
 import { allDocuments } from 'contentlayer/generated';
-import type { Toc } from 'pliny/mdx-plugins';
+import type { Toc } from '@beskar-labs/datapad';
 import type { FC } from 'react';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 const doc = allDocuments[0];
 
