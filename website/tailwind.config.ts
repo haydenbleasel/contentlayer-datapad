@@ -7,6 +7,7 @@ const config: Config = {
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './node_modules/@beskar-labs/gravity/**/*.js',
+    '../dist/*.js',
   ],
   theme: {
     extend: {
