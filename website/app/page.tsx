@@ -1,8 +1,9 @@
 import { Snippet } from '@beskar-labs/gravity/snippet';
 import { getMDXComponent } from 'next-contentlayer/hooks';
-import { ClockIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import clsx from 'clsx';
 import { allDocuments } from 'contentlayer/generated';
+import type { Toc } from 'pliny/mdx-plugins';
 import type { FC } from 'react';
 
 const doc = allDocuments[0];
@@ -21,14 +22,14 @@ const Home: FC = () => {
   const Component = getMDXComponent(doc.body.code);
 
   return (
-    <div className="grid h-screen grid-cols-2">
+    <div className="grid h-screen grid-cols-3">
       <Snippet
         className="h-full overflow-y-auto rounded-none"
         language="markdown"
       >
         {snippet}
       </Snippet>
-      <div className="h-full overflow-y-auto p-4">
+      <div className="col-span-2 h-full overflow-y-auto p-4">
         <div className="prose prose-neutral mx-auto">
           {doc.image ? (
             <Image
@@ -45,11 +46,35 @@ const Home: FC = () => {
           <h1>{doc.title}</h1>
           <p className="text-xl text-neutral-500">{doc.description}</p>
 
-          <div className="flex items-center gap-2">
-            <ClockIcon className="h-4 w-4 text-neutral-500" />
-            {doc.readingTime}
+          <div className="not-prose mt-12 grid gap-2">
+            <p className="text-sm text-neutral-500">Reading Time</p>
+            <p className="text-sm">{doc.readingTime}</p>
+            <p className="text-sm text-neutral-500">Sections</p>
+            <ul className="flex list-none flex-col gap-2 text-sm">
+              {(doc.toc as Toc).map((item) => (
+                <li
+                  key={item.url}
+                  style={{
+                    paddingLeft: `${item.depth - 2}rem`,
+                  }}
+                >
+                  <a
+                    href={item.url}
+                    className={clsx(
+                      'flex rounded-sm text-sm underline decoration-black/30 transition-colors hover:decoration-black/50',
+                      'line-clamp-3 text-black'
+                    )}
+                  >
+                    {item.value}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-          <Component />
+          <hr />
+          <div>
+            <Component />
+          </div>
         </div>
       </div>
     </div>
