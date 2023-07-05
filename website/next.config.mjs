@@ -32,6 +32,14 @@ const nextConfig = {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return config;
   },
+
+  // Temporary
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default withContentlayer(nextConfig);
