@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { allDocuments } from 'contentlayer/generated';
 import type { Toc } from 'pliny/mdx-plugins';
 import type { FC } from 'react';
+import { Metadata } from 'next';
 
 const doc = allDocuments[0];
 
@@ -17,6 +18,12 @@ image: ${doc.image ?? ''}
 
 ${doc.body.raw}
 `;
+
+export const metadata: Metadata = {
+  title: '@beskar-labs/datapad',
+  description:
+    'An opinionated Contentlayer configuration designed for Beskar Labs content hubs.',
+};
 
 const Home: FC = () => {
   const Component = getMDXComponent(doc.body.code);
