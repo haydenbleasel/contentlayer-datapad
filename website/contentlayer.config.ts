@@ -3,7 +3,7 @@ import { computeFields, remarkPlugins, rehypePlugins } from '../';
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
-  filePathPattern: `blog/**/*.mdx`,
+  filePathPattern: '*.mdx',
   contentType: 'mdx',
   fields: {
     title: {
