@@ -89,7 +89,7 @@ The computed fields are:
 Here's how to use the custom fields in your Next.js app:
 
 ```tsx
-import { allBlogs } from '@/.contentlayer/generated';
+import { allBlogs } from 'contentlayer/generated';
 import Image from 'next/image';
 import type { Toc } from '@beskar-labs/datapad';
 
