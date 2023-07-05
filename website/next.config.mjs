@@ -1,4 +1,5 @@
 import { createSecureHeaders } from 'next-secure-headers';
+import { withContentlayer } from 'next-contentlayer';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -20,6 +21,17 @@ const nextConfig = {
       },
     ];
   },
+
+  // Silence, contentlayer
+  webpack: (config) => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    config.infrastructureLogging = {
+      level: 'error',
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    return config;
+  },
 };
 
-export default nextConfig;
+export default withContentlayer(nextConfig);

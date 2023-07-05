@@ -1,8 +1,8 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
-import { computeFields, remarkPlugins, rehypePlugins } from '../';
+import { computeFields, remarkPlugins, rehypePlugins } from '..';
 
-export const Blog = defineDocumentType(() => ({
-  name: 'Blog',
+export const Page = defineDocumentType(() => ({
+  name: 'Page',
   filePathPattern: '*.mdx',
   contentType: 'mdx',
   fields: {
@@ -23,12 +23,12 @@ export const Blog = defineDocumentType(() => ({
       required: false,
     },
   },
-  computedFields: computeFields<'Blog'>({}),
+  computedFields: computeFields<'Page'>({}),
 }));
 
 const source = makeSource({
   contentDirPath: './content',
-  documentTypes: [Blog],
+  documentTypes: [Page],
   mdx: {
     remarkPlugins,
     rehypePlugins,
