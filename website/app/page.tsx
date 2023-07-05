@@ -22,14 +22,14 @@ const Home: FC = () => {
   const Component = getMDXComponent(doc.body.code);
 
   return (
-    <div className="grid h-screen grid-cols-3">
+    <div className="grid h-screen grid-cols-2">
       <Snippet
         className="h-full overflow-y-auto rounded-none"
         language="markdown"
       >
         {snippet}
       </Snippet>
-      <div className="col-span-2 h-full overflow-y-auto p-4">
+      <div className="h-full overflow-y-auto p-4">
         <div className="prose prose-neutral mx-auto">
           {doc.image ? (
             <Image

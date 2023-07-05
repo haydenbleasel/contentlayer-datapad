@@ -14,7 +14,7 @@ body {
 }
 
 [data-rehype-pretty-code-title] + pre {
-  @apply mt-0 rounded-tl-none rounded-tr-none;
+  @apply m-0 overflow-hidden rounded-none;
 }
 
 [data-rehype-pretty-code-fragment] {
@@ -23,11 +23,4 @@ body {
 
 [data-highlighted-line] {
   @apply bg-white/10;
-}
-
-code > [data-line]::before {
-  @apply mr-8 inline-block w-4 text-right text-white/30;
-
-  content: counter(line);
-  counter-increment: line;
 }
