@@ -26,7 +26,7 @@ yarn add @beskar-labs/datapad
 
 ```ts
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
-import { computeFields, remarkPlugins, rehypePlugins } from '@beskar/datapad';
+import { computeFields, remarkPlugins, rehypePlugins } from '@beskar-labs/datapad';
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
