@@ -1,4 +1,3 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
 import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
 
@@ -9,14 +8,7 @@ const config: Config = {
     './components/**/*.{ts,tsx}',
     './node_modules/@beskar-labs/gravity/**/*.js',
   ],
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
-        mono: ['var(--font-mono)', ...defaultTheme.fontFamily.mono],
-      },
-    },
-  },
+  theme: {},
   plugins: [typography],
 };
 
