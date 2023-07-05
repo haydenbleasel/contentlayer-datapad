@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  touch-action: manipulation;
+}
+
+[data-rehype-pretty-code-title] {
+  @apply rounded-t-[11px] border-b border-neutral-800 bg-black px-4 py-3 font-mono text-sm text-white;
+}
+
+[data-rehype-pretty-code-title] + pre {
+  @apply mt-0 rounded-tl-none rounded-tr-none;
+}
+
+[data-rehype-pretty-code-fragment] {
+  @apply my-8 rounded-xl bg-gradient-to-tr from-neutral-900 to-neutral-800 p-px;
+}
+
+[data-highlighted-line] {
+  @apply bg-white/10;
+}
+
+code > [data-line]::before {
+  @apply mr-8 inline-block w-4 text-right text-white/30;
+
+  content: counter(line);
+  counter-increment: line;
+}
