@@ -14,6 +14,7 @@ import { extractTocHeadings } from 'pliny/mdx-plugins.js';
 import lqip from 'lqip-modern';
 import type { Options as PrettyCodeOptions } from 'rehype-pretty-code';
 import type { Options as RehypeAutoLinkHeadingsOptions } from 'rehype-autolink-headings';
+import type { Options as RehypeKatexOptions } from 'rehype-katex';
 import type { ComputedFields } from 'contentlayer/source-files';
 import type { Pluggable } from 'unified';
 
@@ -113,10 +114,14 @@ const rehypeAutolinkHeadingsOptions: RehypeAutoLinkHeadingsOptions = {
   },
 };
 
+const rehypeKatexOptions: RehypeKatexOptions = {
+  output: 'mathml',
+};
+
 export const remarkPlugins: Pluggable[] = [remarkGfm, remarkMath];
 
 export const rehypePlugins: Pluggable[] = [
-  rehypeKatex,
+  [rehypeKatex, rehypeKatexOptions],
   rehypeCitation,
   rehypeAccessibleEmojis,
   rehypeSlug,
