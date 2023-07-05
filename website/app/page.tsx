@@ -22,30 +22,35 @@ const Home: FC = () => {
 
   return (
     <div className="grid h-screen grid-cols-2">
-      <Snippet className="rounded-none" language="markdown">
+      <Snippet
+        className="h-full overflow-y-auto rounded-none"
+        language="markdown"
+      >
         {snippet}
       </Snippet>
-      <div className="prose prose-neutral p-4">
-        {doc.image ? (
-          <Image
-            src={doc.image}
-            width={1920}
-            height={1080}
-            alt=""
-            priority
-            blurDataURL={`data:image/jpg;base64,${doc.imageBlur}`}
-            placeholder="blur"
-          />
-        ) : null}
+      <div className="h-full overflow-y-auto p-4">
+        <div className="prose prose-neutral mx-auto">
+          {doc.image ? (
+            <Image
+              src={doc.image}
+              width={1920}
+              height={1080}
+              alt=""
+              priority
+              blurDataURL={`data:image/jpg;base64,${doc.imageBlur}`}
+              placeholder="blur"
+            />
+          ) : null}
 
-        <h1>{doc.title}</h1>
-        <p className="text-xl text-neutral-500">{doc.description}</p>
+          <h1>{doc.title}</h1>
+          <p className="text-xl text-neutral-500">{doc.description}</p>
 
-        <div className="flex items-center gap-2">
-          <ClockIcon className="h-4 w-4 text-neutral-500" />
-          {doc.readingTime}
+          <div className="flex items-center gap-2">
+            <ClockIcon className="h-4 w-4 text-neutral-500" />
+            {doc.readingTime}
+          </div>
+          <Component />
         </div>
-        <Component />
       </div>
     </div>
   );
