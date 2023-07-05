@@ -19,7 +19,7 @@ It includes the following plugins:
 ## Installation
 
 ```bash
-yarn add @beskar/datapad
+yarn add @beskar-labs/datapad
 ```
 
 ## Setup
