@@ -50,8 +50,8 @@ export const computeFields = <T extends string>({
     type: 'string',
     description: 'The image of the document',
     resolve: (doc) => {
-      if (!doc.image) {
-        return '';
+      if (typeof doc.image === 'string') {
+        return doc.image;
       }
 
       const searchParams = new URLSearchParams();
