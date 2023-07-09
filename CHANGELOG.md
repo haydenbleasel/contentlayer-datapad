@@ -1,3 +1,22 @@
+# v1.0.15 (Sun Jul 09 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update README.md ([@haydenbleasel](https://github.com/haydenbleasel))
+- Extend rehype plugins to support theme ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump stylelint from 15.9.0 to 15.10.1 in /website [#1](https://github.com/beskar-co/datapad/pull/1) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump stylelint from 15.9.0 to 15.10.1 [#2](https://github.com/beskar-co/datapad/pull/2) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.13 (Wed Jul 05 2023)
 
 #### ⚠️ Pushed to `main`
