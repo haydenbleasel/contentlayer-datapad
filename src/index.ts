@@ -17,6 +17,7 @@ import type { Options as RehypeAutoLinkHeadingsOptions } from 'rehype-autolink-h
 import type { Options as RehypeKatexOptions } from 'rehype-katex';
 import type { ComputedFields } from 'contentlayer/source-files';
 import type { Pluggable } from 'unified';
+import type { Theme } from 'shiki';
 
 export const computeFields = <T extends string>({
   openGraphEndpoint = '/api/og',
@@ -88,7 +89,6 @@ export const computeFields = <T extends string>({
 });
 
 const rehypePrettyCodeOptions: PrettyCodeOptions = {
-  theme: 'one-dark-pro',
   keepBackground: false,
   onVisitLine(node) {
     if (node.children.length === 0) {
@@ -118,14 +118,18 @@ const rehypeKatexOptions: RehypeKatexOptions = {
   output: 'mathml',
 };
 
-export const remarkPlugins: Pluggable[] = [remarkGfm, remarkMath];
+export const remarkPlugins = (): Pluggable[] => [remarkGfm, remarkMath];
 
-export const rehypePlugins: Pluggable[] = [
+export const rehypePlugins = ({
+  theme = 'one-dark-pro',
+}: {
+  theme: Theme;
+}): Pluggable[] => [
   [rehypeKatex, rehypeKatexOptions],
   rehypeCitation,
   rehypeAccessibleEmojis,
   rehypeSlug,
-  [rehypePrettyCode, rehypePrettyCodeOptions],
+  [rehypePrettyCode, { ...rehypePrettyCodeOptions, theme }],
   [rehypeAutolinkHeadings, rehypeAutolinkHeadingsOptions],
   rehypePresetMinify,
 ];

@@ -26,7 +26,11 @@ yarn add @beskar-labs/datapad
 
 ```ts
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
-import { computeFields, remarkPlugins, rehypePlugins } from '@beskar-labs/datapad';
+import {
+  computeFields,
+  remarkPlugins,
+  rehypePlugins,
+} from '@beskar-labs/datapad';
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
@@ -57,8 +61,8 @@ const source = makeSource({
   contentDirPath: './content',
   documentTypes: [Blog],
   mdx: {
-    remarkPlugins,
-    rehypePlugins,
+    remarkPlugins: remarkPlugins(),
+    rehypePlugins: rehypePlugins({}),
   },
 });
 
@@ -66,6 +70,8 @@ export default source;
 ```
 
 ## Configuration
+
+### computeFields
 
 `computeFields` accepts a configuration object with the following properties:
 
@@ -83,6 +89,18 @@ The computed fields are:
 | `readingTime` | `string` | The estimated time to read the document, in minutes | `'5 min read'` |
 | `toc` | `json` | The table of contents of the document | `[{ value: 'Heading 1', depth: 1, url: '#heading-1' }]` |
 | `imageBlur` | `string` | The LQIP image data of the document | `'UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAkABUB8JYwC7ADbW2wxAAD+5fWSusCgEGgrbEnESec12AakPGs5RtCwUs8GJTOZH7EgIAA='` |
+
+### remarkPlugins
+
+`remarkPlugins` does not accept any configuration.
+
+### rehypePlugins
+
+`rehypePlugins` accepts a configuration object with the following properties:
+
+| Property | Type | Description | Default |
+| --- | --- | --- | --- |
+| shikiTheme | `Theme` | The theme to use for syntax highlighting | `'one-dark-pro'` |
 
 ## Usage
 
