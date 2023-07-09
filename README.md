@@ -69,6 +69,19 @@ const source = makeSource({
 export default source;
 ```
 
+Also, update your Tailwind config to include the following:
+
+```ts
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
+  content: ['./node_modules/@beskar-labs/datapad/**/*.js'],
+  // ...
+};
+
+export default config;
+```
+
 ## Configuration
 
 ### computeFields
