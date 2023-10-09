@@ -38,7 +38,6 @@
   },
   "homepage": "https://github.com/haydenbleasel/contentlayer-datapad#readme",
   "devDependencies": {
-    "@beskar-labs/harmony": "^2.1.1",
     "@types/lqip-modern": "^1.1.3",
     "contentlayer": "^0.3.4",
     "eslint": "^8.37.0",
@@ -51,11 +50,12 @@
     "typescript": "^5.0.3",
     "unified": "^10.1.2"
   },
-  "prettier": "@beskar-labs/harmony/prettier",
+  "prettier": "eslint-config-harmony/prettier",
   "stylelint": {
-    "extends": "@beskar-labs/harmony/stylelint"
+    "extends": "eslint-config-harmony/stylelint"
   },
   "dependencies": {
+    "eslint-config-harmony": "^3.0.2",
     "lqip-modern": "^2.0.0",
     "pliny": "^0.0.10",
     "reading-time": "^1.5.0",
