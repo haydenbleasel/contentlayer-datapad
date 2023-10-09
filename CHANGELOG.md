@@ -1,3 +1,27 @@
+# v1.0.16 (Mon Oct 09 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update push.yml ([@haydenbleasel](https://github.com/haydenbleasel))
+- Misc fixes ([@haydenbleasel](https://github.com/haydenbleasel))
+- Switch from Yarn to pnpm ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update Harmony ([@haydenbleasel](https://github.com/haydenbleasel))
+- Remove website ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update name ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump word-wrap from 1.2.3 to 1.2.4 in /website [#5](https://github.com/haydenbleasel/contentlayer-datapad/pull/5) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump semver from 6.3.0 to 6.3.1 [#3](https://github.com/haydenbleasel/contentlayer-datapad/pull/3) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump semver from 6.3.0 to 6.3.1 in /website [#4](https://github.com/haydenbleasel/contentlayer-datapad/pull/4) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.15 (Sun Jul 09 2023)
 
 #### ⚠️ Pushed to `main`
