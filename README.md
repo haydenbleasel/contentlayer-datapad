@@ -1,6 +1,6 @@
 # datapad
 
-An opinionated Contentlayer configuration designed for Beskar Labs content hubs.
+Awesome Contentlayer configuration with GFM, LQIP, TOC and more.
 
 It includes the following plugins:
 

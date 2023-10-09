@@ -1,7 +1,7 @@
 {
-  "name": "@beskar-labs/datapad",
+  "name": "contentlayer-datapad",
   "version": "1.0.15",
-  "description": "An opinionated Contentlayer configuration designed for Beskar Labs content hubs.",
+  "description": "Awesome Contentlayer configuration with GFM, LQIP, TOC and more.",
   "files": [
     "dist"
   ],
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beskar-co/datapad.git"
+    "url": "git+https://github.com/haydenbleasel/contentlayer-datapad.git"
   },
   "keywords": [
     "contentlayer",
@@ -34,9 +34,9 @@
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/beskar-co/datapad/issues"
+    "url": "https://github.com/haydenbleasel/contentlayer-datapad/issues"
   },
-  "homepage": "https://github.com/beskar-co/datapad#readme",
+  "homepage": "https://github.com/haydenbleasel/contentlayer-datapad#readme",
   "devDependencies": {
     "@beskar-labs/harmony": "^2.1.1",
     "@types/lqip-modern": "^1.1.3",
