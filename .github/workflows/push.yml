@@ -32,9 +32,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: yarn-deps-${{ hashFiles('yarn.lock') }}
+          key: pnpm-deps-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: |
-            yarn-deps-${{ hashFiles('yarn.lock') }}
+            pnpm-deps-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Create Release
         env:
