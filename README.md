@@ -19,7 +19,7 @@ It includes the following plugins:
 ## Installation
 
 ```bash
-yarn add @beskar-labs/datapad
+yarn add contentlayer-datapad
 ```
 
 ## Setup
@@ -30,7 +30,7 @@ import {
   computeFields,
   remarkPlugins,
   rehypePlugins,
-} from '@beskar-labs/datapad';
+} from 'contentlayer-datapad';
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
@@ -75,7 +75,7 @@ Also, update your Tailwind config to include the following:
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: ['./node_modules/@beskar-labs/datapad/**/*.js'],
+  content: ['./node_modules/contentlayer-datapad/**/*.js'],
   // ...
 };
 
@@ -122,7 +122,7 @@ Here's how to use the custom fields in your Next.js app:
 ```tsx
 import { allBlogs } from 'contentlayer/generated';
 import Image from 'next/image';
-import type { Toc } from '@beskar-labs/datapad';
+import type { Toc } from 'contentlayer-datapad';
 
 return allBlogs.sort(sortBlogPostByDate).map((post) => (
   <div key={post.name}>
