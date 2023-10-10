@@ -9,8 +9,7 @@ import readingTime from 'reading-time';
 import remarkMath from 'remark-math';
 import rehypePresetMinify from 'rehype-preset-minify';
 import rehypeKatex from 'rehype-katex';
-import rehypeCitation from 'rehype-citation';
-import { extractTocHeadings } from 'pliny/mdx-plugins.js';
+import { extractTocHeadings } from 'pliny/mdx-plugins';
 import lqip from 'lqip-modern';
 import type { Options as PrettyCodeOptions } from 'rehype-pretty-code';
 import type { Options as RehypeAutoLinkHeadingsOptions } from 'rehype-autolink-headings';
@@ -126,7 +125,6 @@ export const rehypePlugins = ({
   theme: Theme;
 }): Pluggable[] => [
   [rehypeKatex, rehypeKatexOptions],
-  rehypeCitation,
   rehypeAccessibleEmojis,
   rehypeSlug,
   [rehypePrettyCode, { ...rehypePrettyCodeOptions, theme }],
