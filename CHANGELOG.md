@@ -1,3 +1,15 @@
+# v1.0.17 (Tue Oct 10 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Misc updates ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.16 (Mon Oct 09 2023)
 
 #### ⚠️ Pushed to `main`
