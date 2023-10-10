@@ -1,6 +1,6 @@
 {
   "name": "contentlayer-datapad",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Awesome Contentlayer configuration with GFM, LQIP, TOC and more.",
   "files": [
     "dist"
