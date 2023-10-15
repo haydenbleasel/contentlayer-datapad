@@ -7,7 +7,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis';
 import readingTime from 'reading-time';
 import rehypePresetMinify from 'rehype-preset-minify';
-import { extractTocHeadings } from 'pliny/mdx-plugins';
+import { extractTocHeadings } from 'pliny/mdx-plugins/remark-toc-headings';
 import lqip from 'lqip-modern';
 import type { Options as PrettyCodeOptions } from 'rehype-pretty-code';
 import type { Options as RehypeAutoLinkHeadingsOptions } from 'rehype-autolink-headings';
