@@ -110,7 +110,7 @@ const rehypeAutolinkHeadingsOptions: RehypeAutoLinkHeadingsOptions = {
   },
 };
 
-export const remarkPlugins = (): Pluggable[] => [remarkGfm];
+export const remarkPlugins = (): Pluggable[] => [remarkGfm as Pluggable];
 
 export const rehypePlugins = ({
   theme = 'one-dark-pro',
