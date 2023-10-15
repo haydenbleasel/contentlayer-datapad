@@ -1,3 +1,15 @@
+# v1.0.19 (Sun Oct 15 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update index.ts ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.18 (Sun Oct 15 2023)
 
 #### ⚠️ Pushed to `main`
