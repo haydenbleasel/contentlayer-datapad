@@ -1,3 +1,15 @@
+# v1.0.18 (Sun Oct 15 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Remove math and katex ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.17 (Tue Oct 10 2023)
 
 #### ⚠️ Pushed to `main`
