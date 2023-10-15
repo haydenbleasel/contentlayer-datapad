@@ -6,14 +6,11 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis';
 import readingTime from 'reading-time';
-import remarkMath from 'remark-math';
 import rehypePresetMinify from 'rehype-preset-minify';
-import rehypeKatex from 'rehype-katex';
 import { extractTocHeadings } from 'pliny/mdx-plugins';
 import lqip from 'lqip-modern';
 import type { Options as PrettyCodeOptions } from 'rehype-pretty-code';
 import type { Options as RehypeAutoLinkHeadingsOptions } from 'rehype-autolink-headings';
-import type { Options as RehypeKatexOptions } from 'rehype-katex';
 import type { ComputedFields } from 'contentlayer/source-files';
 import type { Pluggable } from 'unified';
 import type { Theme } from 'shiki';
@@ -113,18 +110,13 @@ const rehypeAutolinkHeadingsOptions: RehypeAutoLinkHeadingsOptions = {
   },
 };
 
-const rehypeKatexOptions: RehypeKatexOptions = {
-  output: 'mathml',
-};
-
-export const remarkPlugins = (): Pluggable[] => [remarkGfm, remarkMath];
+export const remarkPlugins = (): Pluggable[] => [remarkGfm];
 
 export const rehypePlugins = ({
   theme = 'one-dark-pro',
 }: {
   theme: Theme;
 }): Pluggable[] => [
-  [rehypeKatex, rehypeKatexOptions],
   rehypeAccessibleEmojis,
   rehypeSlug,
   [rehypePrettyCode, { ...rehypePrettyCodeOptions, theme }],

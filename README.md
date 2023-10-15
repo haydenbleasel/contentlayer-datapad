@@ -10,7 +10,6 @@ It includes the following plugins:
 - Anchor links on headings via [rehype-autolink-headings](https://github.com/rehypejs/rehype-autolink-headings)
 - Accessible emojis via [rehype-accessible-emojis](https://github.com/GaiAma/Coding4GaiAma/tree/master/packages/rehype-accessible-emojis)
 - Reading time via [reading-time](https://github.com/ngryman/reading-time)
-- Math support via [remark-math](https://github.com/remarkjs/remark-math/tree/main) and [rehype-katex](https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex)
 - Minification via [rehype-preset-minify](https://github.com/rehypejs/rehype-minify/tree/main)
 - Table of Contents extraction via [pliny/mdx-plugins](https://github.com/timlrx/pliny/blob/main/packages/pliny/src/mdx-plugins/remark-toc-headings.ts)
 - LQIP image generation via [lqip-modern](https://github.com/transitive-bullshit/lqip-modern#readme) for [next/image](https://nextjs.org/docs/pages/api-reference/components/image)
