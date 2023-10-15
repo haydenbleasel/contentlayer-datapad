@@ -124,4 +124,4 @@ export const rehypePlugins = ({
   rehypePresetMinify,
 ];
 
-export type { Toc } from 'pliny/mdx-plugins';
+export type { Toc } from 'pliny/mdx-plugins/remark-toc-headings';
