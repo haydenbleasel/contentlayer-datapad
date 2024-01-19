@@ -1,3 +1,20 @@
+# v1.0.22 (Fri Jan 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Create FUNDING.yml ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump @babel/traverse from 7.23.0 to 7.23.2 [#10](https://github.com/haydenbleasel/contentlayer-datapad/pull/10) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.21 (Sun Oct 15 2023)
 
 #### ⚠️ Pushed to `main`
